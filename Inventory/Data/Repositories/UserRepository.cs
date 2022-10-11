@@ -44,9 +44,9 @@ namespace Inventory.Data.Repositories
             return this.DbSet.AsNoTracking().FirstOrDefault(x => x.Id == id && !x.IsDeleted);
         }
 
-        public bool IsExists(string name)
+        public bool IsExists(string login)
         {
-            return this.DbSet.AsNoTracking().FirstOrDefault(x => x.Name.ToLower() == name.ToLower() && !x.IsDeleted) != null;
+            return this.DbSet.AsNoTracking().FirstOrDefault(x => x.Login.ToLower() == login.ToLower() && !x.IsDeleted) != null;
         }
     }
 }

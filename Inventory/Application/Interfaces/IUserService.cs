@@ -4,9 +4,9 @@ namespace Inventory.Application.Interfaces
 {
     public interface IUserService
     {
-        public void Save(UserCreateDTO userCreateDto);
+        public void Save(UserCreateDTO userDto);
         public List<UserReadDTO> FindAll();
-        public UserUpdateDTO Update();
+        public void Update(UserUpdateDTO userDto);
         public void Delete(int id);
         public UserReadDTO FindById(int id);
     }

@@ -9,7 +9,7 @@ namespace Inventory.Data.Interfaces
         public User Update(User user);
         public User Delete(User user);
         public User FindById(int id);
-        public bool IsExists(string name);
+        public bool IsExists(string login);
 
     }
 }
