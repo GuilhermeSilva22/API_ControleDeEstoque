@@ -12,7 +12,7 @@ namespace Inventory.Data.Entities
 
         [Required]
         [Column("create_date")]
-        public DateTime CreationDate { get; set; }
+        public DateTime CreateDate { get; set; }
 
         [Required]
         [Column("is_deleted")]

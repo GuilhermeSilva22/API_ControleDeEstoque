@@ -1,10 +1,11 @@
 ﻿using Inventory.Application.Dtos.ItemDtos;
+using Inventory.Application.Interfaces;
 using Inventory.Application.Mappers;
 using Inventory.Data.Interfaces;
 
 namespace Inventory.Application.Services
 {
-    public class ItemService
+    public class ItemService : IItemService
     {
         private readonly IItemRepository _itemRepository;
 
@@ -48,7 +49,7 @@ namespace Inventory.Application.Services
             _itemRepository.Delete(item);
         }
 
-        public ItemReadDTO FindByID(int id)
+        public ItemReadDTO FindById(int id)
         {
             return _itemRepository.FindById(id).ToDto();
         }

@@ -1,10 +1,11 @@
 ﻿using Inventory.Application.Dtos.UserDtos;
+using Inventory.Application.Interfaces;
 using Inventory.Application.Mappers;
 using Inventory.Data.Interfaces;
 
 namespace Inventory.Application.Services
 {
-    public class UserService
+    public class UserService : IUserService
     {
         private readonly IUserRepository _userRepository;
 
